@@ -1,0 +1,136 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #2e3036;
+}
+
+.image-grid {
+  column-count: 3;
+  padding: 20px;
+}
+.image-item {
+  background-color: #474a51;
+  border-radius: 5px;
+  border-bottom: solid 4px transparent;
+  transition: background-color 250ms;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-item p {
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.14;
+  font-size: 14px;
+  text-align: left;
+  color: #fff;
+}
+
+.gallery-selection {
+  background: #1bb76e;
+  color: white;
+  border: 1px;
+  margin-left: 10px;
+  padding: 5px;
+  font-weight: 700;
+}
+.dropdown {
+  min-height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.dropdown * {
+  box-sizing: border-box;
+}
+
+.select {
+  background-color: #1bb76e;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px #1bb76e;
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-weight: 700;
+}
+
+.select:hover {
+  background: #1cc274;
+}
+
+.gallery-selection:hover {
+  background: #1cc274;
+}
+.scores {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.scores p {
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  color: #b4b9c2;
+}
+.up-down {
+  max-width: 20px;
+}
+
+.only-viral {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #babec4;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+  background-color: #474a51;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #b4b9c2;
+  max-width: 500px;
+}
+.modal-img {
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+}
+.modal-content p {
+  color: #b4b9c2;
+}
+.modal-content h3 {
+  color: #fff;
+}
+
+.close {
+  color: #fff;
+  cursor: pointer;
+}
+/* .close {
+  color: #fff;
+  cursor: pointer;
+} */
