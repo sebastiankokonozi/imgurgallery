@@ -4,11 +4,12 @@ import "../css/ImageGrid.css";
 import { useAppDispatch, useAppSelector } from "../pages/hooks/reduxHooks";
 import {
   ImgurImage,
-  setGallerySelection,
   setImages,
   setIncludeViral,
   setSelectedImage,
 } from "../pages/redux/slice";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import upvotes from "../images/upvotes.svg";
 import downvotes from "../images/downvotes.svg";
 import { NavHeader } from "./NavHeader";
@@ -117,7 +118,7 @@ const ImageGrid: React.FC = () => {
             className="image-item"
             onClick={() => handleImageClick(image)}
           >
-            <img src={image.link} alt={image.title} loading="lazy" />
+            <LazyLoadImage effect="blur" src={image.link} alt={image.title} />
 
             <p>{image.title}</p>
             <div className="scores">
