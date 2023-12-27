@@ -1,0 +1,29 @@
+.header {
+  position: fixed;
+  top: 0;
+  max-height: 70px;
+  width: 100vw;
+  grid-template-areas: "logo nav";
+  padding: 10px 0px;
+  background-color: #171545;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.header-wrap {
+  display: flex;
+  place-content: center space-between;
+}
+
+.Logo {
+  padding-left: 20px;
+  margin: 10px 0px 10px;
+}
+
+@media (max-width: 700px) {
+  .Nav {
+    padding: 30px 0 30px;
+    background: rgba(40, 44, 47, 0.95);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}

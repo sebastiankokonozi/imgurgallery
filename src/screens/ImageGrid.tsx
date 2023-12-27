@@ -11,6 +11,7 @@ import {
 } from "../pages/redux/slice";
 import upvotes from "../images/upvotes.svg";
 import downvotes from "../images/downvotes.svg";
+import { NavHeader } from "./NavHeader";
 
 const ImageGrid: React.FC = () => {
   const { images, includeViral, gallerySelection, selectedImage } =
@@ -96,27 +97,9 @@ const ImageGrid: React.FC = () => {
       });
   }, [gallerySelection, includeViral]);
 
-  // Function to handle gallery selection change
-  const handleGallerySelectionChange = (selectedOption: string) => {
-    dispatch(setGallerySelection(selectedOption));
-  };
-
   return (
-    <div>
-      <div className="dropdown">
-        <div className="select">
-          <span className="selected">Select Gallery:</span>
-          <select
-            className="gallery-selection"
-            onChange={(e) => handleGallerySelectionChange(e.target.value)}
-          >
-            <option value="hot">Hot</option>
-            <option value="top">Top</option>
-            <option value="user">User</option>
-          </select>
-        </div>
-      </div>
-
+    <div className="content">
+      <NavHeader />
       <div className="only-viral">
         <label>
           Include Viral Images:
@@ -135,16 +118,17 @@ const ImageGrid: React.FC = () => {
             onClick={() => handleImageClick(image)}
           >
             <img src={image.link} alt={image.title} loading="lazy" />
+
             <p>{image.title}</p>
             <div className="scores">
-              <p>
+              <div className="scores_wrapper">
                 <img src={upvotes} className="up-down" alt="Upvotes" />
                 {image.ups}
-              </p>
-              <p>
+              </div>
+              <div className="scores_wrapper">
                 <img src={downvotes} className="up-down" alt="Downvotes" />{" "}
                 {image.downs}
-              </p>
+              </div>
             </div>
           </div>
         ))}

@@ -2,10 +2,21 @@ body {
   font-family: Arial, sans-serif;
   background-color: #2e3036;
 }
+.content {
+  margin-top: 100px;
+}
 
 .image-grid {
-  column-count: 3;
+  column-count: 4;
   padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 764px) {
+  .image-grid {
+    column-count: 2;
+  }
 }
 .image-item {
   background-color: #474a51;
@@ -41,11 +52,10 @@ body {
   font-weight: 700;
 }
 .dropdown {
-  min-height: 150px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  flex-wrap: wrap;
+  margin-right: 50px;
 }
 .dropdown * {
   box-sizing: border-box;
@@ -59,7 +69,7 @@ body {
   align-items: center;
   border: 2px #1bb76e;
   border-radius: 8px;
-  padding: 16px;
+  padding: 8px;
   cursor: pointer;
   transition: background 0.3s;
   font-weight: 700;
@@ -77,11 +87,15 @@ body {
   justify-content: center;
   align-items: baseline;
 }
-.scores p {
+.scores_wrapper {
+  display: flex;
+  align-items: center;
+  /* flex-direction: column; */
   font-size: 12px;
   line-height: 1.5;
   letter-spacing: 0.3px;
   color: #b4b9c2;
+  padding-left: 10px;
 }
 .up-down {
   max-width: 20px;
@@ -130,7 +144,3 @@ body {
   color: #fff;
   cursor: pointer;
 }
-/* .close {
-  color: #fff;
-  cursor: pointer;
-} */
